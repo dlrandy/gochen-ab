@@ -1,0 +1,84 @@
+<div ng-class="{loading:loadingView}">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" ui-sref="app">GoChen</a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li ui-sref-active="active"><a ui-sref="app.post">文章管理</a></li>
+                    <li ui-sref-active="active"><a ui-sref="app.author">作者管理</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><signinandup></signinandup></li>
+                   
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </nav>
+
+    <div style="margin-top:70px;" class="container" ui-view></div>
+
+
+
+   
+
+    <div class="modall"></div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    ©版权所有<img ng-src="{{homeCtrl.footerIcon}}"
+                                          width="18" height="20" alt=""/>
+                </div>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="text-muted">技术支持</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+       <!--  <div ng-controller="SignInAndUpController as signInAndUpCtrl" class="modal fade" id="singnInModal" tabindex="-1" role="dialog" aria-labelledby="q-login-label">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="q-login-label">管理登录</h4>
+      </div>
+      <div class="modal-body">
+      <form>
+        <div class="form-group">
+            <div class="input-group">
+                <span class="input-group-addon">
+                <span class="glyphicon glyphicon-user" aria-hidden="true"></span></span>
+                <input ng-model="signInAndUpCtrl.user.phone" type="text" class="form-control" placeholder="email" aria-describedby="sizing-addon1">
+            </div>
+        </div>   
+        <div class="form-group">
+            <div class="input-group">
+                <span class="input-group-addon">
+                <span class="glyphicon glyphicon-lock" aria-hidden="true"></span></span>
+                <input ng-model="signInAndUpCtrl.user.password" type="text" class="form-control" placeholder="password" aria-describedby="sizing-addon1">
+            </div>
+        </div>
+      </form>
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-primary" ng-click="signInAndUpCtrl.signIn()">登录</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+ -->

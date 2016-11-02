@@ -1,0 +1,62 @@
+.affix {
+top: 0;
+  width: 100%;
+  background-color: yellow;
+}
+
+.affix-top {
+  width: 100%;
+  top: 0;
+  background-color: red;
+}
+
+.affix-bottom {
+  position: absolute;
+  width: 100%;  
+  background-color: green;
+}
+
+
+@media (min-width: 768px) {
+	@mixin modal-dialog-size($size){
+		width: #{$size}px;
+	}
+	#singnInModal .modal-dialog{
+		@include modal-dialog-size(450);
+		// top: 50%;
+		-webkit-transform: translateY(70%);
+		   -moz-transform: translateY(70%);
+		    -ms-transform: translateY(70%);
+		     -o-transform: translateY(70%);
+		        transform: translateY(70%);
+	}
+	#signUpModal{
+		@include modal-dialog-size(450);
+			// top: 50%;
+		-webkit-transform: translateY(70%);
+		   -moz-transform: translateY(70%);
+		    -ms-transform: translateY(70%);
+		     -o-transform: translateY(70%);
+		        transform: translateY(70%);
+	}
+}
+
+.loading{
+	overflow: hidden;
+}
+
+.loading .modall{
+	display: block;
+}
+.modall{
+	display: none;
+	position: fixed;
+	z-index: 1000;
+	top:0;
+	left:0;
+	height: 100%;
+	width: 100%;
+	background: rgba(244, 249, 251, .8) url("../imgs/loader.gif") 50% 50% no-repeat;
+}
+
+
