@@ -7,5 +7,5 @@ import config from './config'
 export default angular.module('postModule', [])
 	.config(config)
 	.controller('PostController', PostController)
-	.service('PostService',PostService)
-	.name;
+	.factory('PostService',() => (PostService))
+	.name

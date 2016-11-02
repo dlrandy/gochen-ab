@@ -2,7 +2,7 @@ var _ = require('lodash');
 var path = require('path');
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
-
+var autoprefixer = require('autoprefixer');
 var pathApp;
 
 function pathTo() {
@@ -67,7 +67,7 @@ module.exports = function (options) {
                 },
                 {
                     test: /\.scss$/,
-                    loader: 'style-loader!css!sass'
+                    loader: 'style-loader!css!postcss-loader!sass'
                 },
                 {
                     test: /\.css$/,
@@ -92,6 +92,7 @@ module.exports = function (options) {
                 }
 
 	    	],
+            postcss: [ autoprefixer({ browsers: ['last 2 versions'] }) ],
 	    	resolveLoader: {
             root: path.join( __dirname, '..','node_modules' )
         }
