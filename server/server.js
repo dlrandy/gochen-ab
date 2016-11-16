@@ -8,7 +8,7 @@ import _ from 'lodash';
 
 const __PROD__ = process.env.NODE_ENV === 'production'
 const __TEST__ = process.env.NODE_ENV === 'test'
-const port = process.env.PORT || 5000
+const port = process.env.PORT || 3000
 let server;
 
 if (__PROD__ || __TEST__) {
@@ -72,8 +72,8 @@ if (__PROD__ || __TEST__) {
     
     });
   
-    server.listen(5000, "localhost", function() {
-      console.log('dev server running 5000.')
+    server.listen(port, "localhost", function() {
+      console.log('dev server running '+port+'.')
     });
 }
 

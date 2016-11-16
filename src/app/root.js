@@ -36,6 +36,10 @@ angular.module('main', [angularUIRouter, angularResource,angularAnimate, angular
             response: function (response) {
                 loadingService.setLoading(false);
                 return response;
+            },
+            responseError: function (response) {
+                loadingService.setLoading(false);
+                return response;
             }
         };
         return loadingInterceptor;

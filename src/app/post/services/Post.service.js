@@ -2,33 +2,31 @@
 	constructor($resource, $http){
 		this.$http = $http;
 		this.$Post = $resource('/api/posts/:id',{id:'@id'}, {
-        update: {method: 'PUT'}
-    });
+        	update: {method: 'PUT'}
+   		 });
 	}
  	getPostList() {
  		return this.$Post.query();
  	}
- 	getPostById(user_id) {
+ 	getPostById(post_id) {
  		return this.$Post.get({
- 			id: user_id
+ 			id: post_id
 		 })
  	}
- 	putPostById(user_id) {
+ 	putPostById(post_id) {
  		return this.$Post.put({
- 			id: user_id
- 		}, (result) => {
- 			return  result;
+ 			id: post_id
  		})
  	}
- 	deletePost(user_id) {
+ 	deletePost(post_id, cb) {
  		return this.$Post.remove({//not deelte for IE
- 			id: user_id
- 		})
+ 			id: post_id
+ 		}, cb)
  	}
     createPost() {
-    return new  this.$Post()
+    return new  this.$Post();
     }
     
 
  }
-//  PostService.$inject = ['$reosurce', '$http'];
+ PostService.$inject = ['$resource', '$http'];

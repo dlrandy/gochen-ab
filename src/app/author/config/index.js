@@ -1,7 +1,8 @@
 
 import authorTemplate from '../tmpl/template.html';
 import AuthorController from '../controllers/Author.controller';
-
+import authorAddTemplate from '../tmpl/add.html';
+import AuthorAddController from '../controllers/AuthorAdd.controller';
 
 export default function routing(
     $stateProvider) {
@@ -12,8 +13,20 @@ export default function routing(
             controller: AuthorController,
             controllerAs: 'authorCtrl',
             resolve: {
-                authorList: (authorService) => {
-                    return [];
+                authorList: (AUTHORSERVICE) => {
+                    return AUTHORSERVICE.getAuthorList();
+                }
+                
+            }
+        })
+        .state('app.author.add', {
+            url: '/add',
+            templateUrl: authorAddTemplate,
+            controller: AuthorAddController,
+            controllerAs: 'authorAddCtrl',
+            resolve: {
+                newAuthor: (AUTHORSERVICE) => {
+                    return AUTHORSERVICE.createAuthor();
                 }
                 
             }

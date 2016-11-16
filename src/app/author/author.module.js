@@ -7,5 +7,5 @@ import config from './config'
 export default angular.module('authorModule', [])
 	.config(config)
 	// .controller('AuthorController', AuthorController)
-	.service('AuthorService',AuthorService)
+	.factory('AUTHORSERVICE',['$resource','$http',($resource, $http) => (new AuthorService($resource, $http))])
 	.name;

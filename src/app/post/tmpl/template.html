@@ -1,1 +1,33 @@
-<div>posts</div>
+<div class="page-header">
+	<h1>所有文章</h1>
+</div>
+
+<div id="alertContainer"></div>
+
+<div class="table-responsive">
+    <a ui-sref="app.postadd">添加新文章</a>{{postCtrl.postList.length}}
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>标题</th>
+				<th>描述</th>
+				<th>类型</th>
+				<th>作者</th>
+				<th>操作</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="item in postCtrl.postList track by item.id">
+				<td><a href="{{item.id}}">{{item.title}}</a></td>
+				<td>{{item.description}}</td>
+				<td>{{item.category_id}}</td>
+				<td>{{item.author_id}}</td>
+				<td>
+					<a   ui-sref="app.postupdate({id:item.id})" class="btn btn-default btn-xs">修改</a>
+					<button class="btn btn-danger btn-xs" ng-click="postCtrl.delete(item.id)">删除</button>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
+</div>

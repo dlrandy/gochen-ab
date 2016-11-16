@@ -8,13 +8,13 @@ var webpackDevConfig = {
 		debug: true,
 		entry: {
 			app: [
-			'webpack-dev-server/client?http://localhost:5000/',
+			'webpack-dev-server/client?http://localhost:3000/',
             'webpack/hot/dev-server',
 				 path.resolve(__dirname,'../src/app/root.js')
 			]
 		},
 		output: {
-			publicPath: 'http://localhost:5000/'
+			publicPath: 'http://localhost:3000/'
 		}
 	},
 	loaders: [

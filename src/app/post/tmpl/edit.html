@@ -1,24 +1,24 @@
 <div class="page-header">
-	<h1>添加文章yo</h1>
+	<h1>修改文章</h1>
 </div>
 
-<div id="alertContainer" class="alert" role="alert" ng-class="{'alert-danger': postAddCtrl.error, 'alert-success':postAddCtrl.success}" ng-show="postAddCtrl.$alert">{{postAddCtrl.$$alert}}</div>
+<div id="alertContainer" class="alert" role="alert" ng-class="{'alert-danger': postUptCtrl.error, 'alert-success':postUptCtrl.success}" ng-show="postUptCtrl.$alert">{{postUptCtrl.$$alert}}</div>
 
-<form class="form" ng-submit="postAddCtrl.submitNewPost()">
+<form class="form" ng-submit="postUptCtrl.updatePost()">
 	<div class="row">
 		<div class="col-sm-6">
 
 			<div class="form-group">
 				<label for="title" class="col-sm-4 control-label">标题</label>
 				<div class="col-sm-8">
-					<input type="text" id="title" class="form-control" ng-model="postAddCtrl.newPost.title">
+					<input type="text" id="title" class="form-control" ng-model="postUptCtrl.newPost.title">
 				</div>
 			</div>
 
 			<div class="form-group">
 				<label for="description" class="col-sm-4 control-label">描述</label>
 				<div class="col-sm-8">
-					<textarea id="description" class="form-control" ng-model="postAddCtrl.newPost.description" bs-tooltip data-title="文章概要" data-trigger="focus" data-placement="bottom"></textarea>
+					<textarea id="description" class="form-control" ng-model="postUptCtrl.newPost.description" bs-tooltip data-title="文章概要" data-trigger="focus" data-placement="bottom"></textarea>
 				</div>
 			</div>
 
@@ -28,14 +28,14 @@
 			<div class="form-group">
 				<label for="author" class="col-sm-4 control-label">作者</label>
 				<div class="col-sm-8">
-					<input type="text" id="author" class="form-control" ng-model="postAddCtrl.newPost.author_id">
+					<input type="text" id="author" class="form-control" ng-model="postUptCtrl.newPost.author_id">
 				</div>
 			</div>
 
 			<div class="form-group">
 				<label for="category" class="col-sm-4 control-label">类别</label>
 				<div class="col-sm-8">
-					<input type="text" id="category" class="form-control" ng-model="postAddCtrl.newPost.category_id">
+					<input type="text" id="category" class="form-control" ng-model="postUptCtrl.newPost.category_id">
 				</div>
 			</div>
 
@@ -44,7 +44,7 @@
 		<div class="form-group">
 				<label for="content" class="col-sm-2 control-label">内容</label>
 				<div class="col-sm-10">
-					<textarea style="margin: 0px; width: 921px; height: 190px;" id="content" class="form-control" ng-model="postAddCtrl.newPost.content" bs-tooltip data-title="文章内容" data-trigger="focus" data-placement="bottom"></textarea>
+					<textarea style="margin: 0px; width: 921px; height: 190px;" id="content" class="form-control" ng-model="postUptCtrl.newPost.content" bs-tooltip data-title="文章内容" data-trigger="focus" data-placement="bottom"></textarea>
 				</div>
 		</div>
 	</div>

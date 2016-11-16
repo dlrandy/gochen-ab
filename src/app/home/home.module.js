@@ -9,4 +9,4 @@ import config from './config'
 export default angular.module('app', [postModule,authorModule])
 	.config(config)
     // .controller('homeController',HomeController)
-	.name;
+	.name; 
